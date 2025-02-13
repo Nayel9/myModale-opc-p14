@@ -1,0 +1,67 @@
+.modale {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modale-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(22, 68, 52, 0.5);
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    &-error {
+      border: 2px solid red;
+    }
+
+    .modale-title-error, .modale-text-error, {
+      color: red;
+      background-color: #ffeaea;
+      padding: 10px;
+      border: 1px solid red;
+      border-radius: 5px;
+    }
+
+    .modale__button {
+      background: radial-gradient(circle, rgb(152, 184, 141), rgb(133, 168, 133));
+      color: white;
+      height: 50px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1.6rem;
+      font-weight: 700;
+      max-width: 350px;
+      transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+      &:hover {
+        background: radial-gradient(circle, rgb(133, 168, 133), rgb(112, 140, 112));
+        transform: scale(1.05);
+      }
+      &-error {
+        background: radial-gradient(circle, red, pink);
+        &:hover {
+          background: radial-gradient(circle, pink, red);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .modale {
+    .modale-content {
+      flex-direction: column;
+      padding: 10px;
+    }
+  }
+}

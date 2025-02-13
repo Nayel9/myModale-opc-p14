@@ -1,0 +1,13 @@
+# Exclure les fichiers inutiles
+node_modules
+dist/*.map
+src
+public
+.vite
+.vscode
+.git
+.gitignore
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+tests
