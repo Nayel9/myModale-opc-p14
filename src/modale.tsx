@@ -6,9 +6,10 @@ interface ModaleProps {
     content: string;
     onClose: () => void;
     error?: boolean;
+    ariaLabel: string;
 }
 
-export function Modale({title, content, onClose, error}: ModaleProps) {
+export function Modale({title, content, onClose, error, ariaLabel}: ModaleProps) {
     return (
         <div className="modale">
             <div className={`modale-content ${error ? "modale-content-error" : ""}`}>
@@ -23,8 +24,9 @@ export function Modale({title, content, onClose, error}: ModaleProps) {
                 <button
                     className={`modale__button ${error ? "modale__button-error" : ""}`}
                     onClick={onClose}
+                    aria-label={ariaLabel}
                 >
-                    Fermer
+                    Close
                 </button>
             </div>
         </div>
