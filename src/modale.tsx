@@ -7,10 +7,9 @@ interface ModaleProps {
     onClose: () => void;
     error?: boolean;
     ariaLabel: string;
-    dataTestId?: string;
 }
 
-export function Modale({title, content, onClose, error, ariaLabel, dataTestId}: ModaleProps) {
+export function Modale({title, content, onClose, error, ariaLabel}: ModaleProps) {
     return (
         <div className="modale">
             <div className={`modale-content ${error ? "modale-content-error" : ""}`}>
@@ -26,7 +25,7 @@ export function Modale({title, content, onClose, error, ariaLabel, dataTestId}: 
                     className={`modale__button ${error ? "modale__button-error" : ""}`}
                     onClick={onClose}
                     aria-label={ariaLabel}
-                    data-testid={dataTestId}
+                    data-testid="modaleCloseButton"
                 >
                     Close
                 </button>
