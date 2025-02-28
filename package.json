@@ -1,7 +1,7 @@
 {
   "name": "modale-opc-p14",
-  "version": "1.0.6",
-  "description": "A simple modale",
+  "version": "1.1.0",
+  "description": "A simple modale, or dialog component, built with React and TypeScript",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/modale.d.ts",
@@ -21,7 +21,15 @@
   },
   "keywords": [
     "react",
-    "typescript"
+    "typescript",
+    "modal",
+    "dialog",
+    "react-component",
+    "modale",
+    "dialog",
+    "modal-component",
+    "react-modal"
+
   ],
   "author": {
     "name": "Nayel",
